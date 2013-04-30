@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<Header>
+		<Title>int vector</Title>
+		<Author>Philipp Aumayr</Author>
+		<Shortcut>intvector</Shortcut>
+		<Description>Creates an std::vector&lt;int&gt; with elements.</Description>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal>
+				<ID>name</ID>
+				<Default>numbers</Default>
+			</Literal>
+			<Literal>
+				<ID>count</ID>
+				<Default>5</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="cpp">
+			<![CDATA[std::vector<int> $name$($count$);
+			for(int i = 0; i < $count$; i++) { $name$.push_back(i); }]]>
+		</Code>
+	</Snippet>
+</CodeSnippet>
