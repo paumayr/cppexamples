@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExploringInheritance", "ExploringInheritance\ExploringInheritance.vcxproj", "{4EA3AE6F-97B3-4304-8605-E126DDC11542}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExploringInheritanceCpp", "ExploringInheritanceCpp\ExploringInheritanceCpp.vcxproj", "{31079161-1E7C-49E5-809D-836A196ACACE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExploringMultipleInheritanceCpp", "ExploringMultipleInheritanceCpp\ExploringMultipleInheritanceCpp.vcxproj", "{11CBFF48-941C-4A45-8EDD-113200AD0A72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EA3AE6F-97B3-4304-8605-E126DDC11542}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4EA3AE6F-97B3-4304-8605-E126DDC11542}.Debug|Win32.Build.0 = Debug|Win32
+		{4EA3AE6F-97B3-4304-8605-E126DDC11542}.Release|Win32.ActiveCfg = Release|Win32
+		{4EA3AE6F-97B3-4304-8605-E126DDC11542}.Release|Win32.Build.0 = Release|Win32
+		{31079161-1E7C-49E5-809D-836A196ACACE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{31079161-1E7C-49E5-809D-836A196ACACE}.Debug|Win32.Build.0 = Debug|Win32
+		{31079161-1E7C-49E5-809D-836A196ACACE}.Release|Win32.ActiveCfg = Release|Win32
+		{31079161-1E7C-49E5-809D-836A196ACACE}.Release|Win32.Build.0 = Release|Win32
+		{11CBFF48-941C-4A45-8EDD-113200AD0A72}.Debug|Win32.ActiveCfg = Debug|Win32
+		{11CBFF48-941C-4A45-8EDD-113200AD0A72}.Debug|Win32.Build.0 = Debug|Win32
+		{11CBFF48-941C-4A45-8EDD-113200AD0A72}.Release|Win32.ActiveCfg = Release|Win32
+		{11CBFF48-941C-4A45-8EDD-113200AD0A72}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
