@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	DerivedConstruct(&derived, 10, 20);
 
 	printObject(&base);
-	printObject(&derived.base);
+	printObject((Base*)&derived);
 
 	DerivedDestroy(&derived);
 	BaseDestroy(&base);

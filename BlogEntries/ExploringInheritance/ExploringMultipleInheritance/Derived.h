@@ -1,5 +1,5 @@
 #pragma once
-
+#include "AnotherBase.h"
 #include "Base.h"
 
 typedef struct Derived_t Derived;
@@ -9,10 +9,10 @@ typedef struct DerivedTable_t
 	union
 	{
 		BaseTable baseFunctions;
-		void (*print)(Derived* _this);
+		void (*printBase)(Derived *_this);
 	};
-	
-	void (*readFromFile)(Derived* _this);
+
+	void (*readFromFile)(Derived *_this);
 } DerivedTable;
 
 typedef struct DerivedData_t
@@ -22,10 +22,12 @@ typedef struct DerivedData_t
 
 typedef struct Derived_t
 {
-	DerivedTable *vfptr;
-	BaseData base;
-	DerivedData data;
+	DerivedTable *vfptrDerived;
+	BaseData baseData;
+
+	AnotherBaseTable *vfptrAnotherBase;
+	AnotherBaseData anotherBaseData;
+
+	DerivedData derivedData;
 } Derived;
 
-void DerivedConstruct(Derived *_this, int baseMember, int derivedMember);
-void DerivedDestroy(Derived *_this);

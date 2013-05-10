@@ -9,5 +9,5 @@ public:
 	AnotherBase(int anotherBaseMember);
 	~AnotherBase();
 
-	virtual void printAnother();
+	virtual void scan();
 };

@@ -16,3 +16,8 @@ void Derived::print()
 {
 	std::cout << "Derived::print, baseMember = " << getBaseMember() << ", derivedMember = " << derivedMember << std::endl;
 }
+
+void Derived::readFromFile()
+{
+	std::cout << "Derived::readFromFile" << std::endl;
+}

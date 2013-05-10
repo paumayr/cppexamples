@@ -15,27 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Base.hpp">
+    <ClInclude Include="Base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AnotherBase.hpp">
+    <ClInclude Include="AnotherBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Derived.hpp">
+    <ClInclude Include="Derived.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Base.cpp">
+    <ClCompile Include="Base.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AnotherBase.cpp">
+    <ClCompile Include="AnotherBase.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Derived.cpp">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

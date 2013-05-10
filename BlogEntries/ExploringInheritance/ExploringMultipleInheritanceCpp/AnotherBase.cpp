@@ -10,7 +10,7 @@ AnotherBase::~AnotherBase()
 {
 }
 
-void AnotherBase::printAnother()
+void AnotherBase::scan()
 {
 	std::cout << "AnotherBase::printAnother, baseMember = " << anotherBaseMember << std::endl;
 }

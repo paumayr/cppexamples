@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{11CBFF48-941C-4A45-8EDD-113200AD0A72}</ProjectGuid>
+    <ProjectGuid>{64FA8665-752D-467C-BFEC-5427B79C2BF6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>ExploringMultipleInheritanceCpp</RootNamespace>
+    <RootNamespace>ExploringMultipleInheritance</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -78,15 +78,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AnotherBase.hpp" />
-    <ClInclude Include="Base.hpp" />
-    <ClInclude Include="Derived.hpp" />
+    <ClInclude Include="AnotherBase.h" />
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="Derived.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AnotherBase.cpp" />
-    <ClCompile Include="Base.cpp" />
-    <ClCompile Include="Derived.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="AnotherBase.c" />
+    <ClCompile Include="Base.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

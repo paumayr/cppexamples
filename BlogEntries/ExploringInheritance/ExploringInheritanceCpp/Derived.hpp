@@ -11,4 +11,5 @@ public:
 	virtual ~Derived();
 
 	virtual void print();
+	virtual void readFromFile();
 };

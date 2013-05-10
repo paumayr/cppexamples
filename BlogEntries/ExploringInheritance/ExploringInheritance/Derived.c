@@ -6,18 +6,24 @@ DerivedTable derivedTable;
 
 void DerivedPrint(Derived *_this)
 {
-	printf("Derived::print, baseMember = %d, derivedMember = %d\n", _this->base.baseMember, _this->derivedMember);
+	printf("Derived::print, baseMember = %d, derivedMember = %d\n", _this->base.baseMember, _this->data.derivedMember);
+}
+
+void DerivedReadFromFile(Derived *_this)
+{
+	printf("Derived::readFromFile");
 }
 
 void DerivedConstruct(Derived *_this, int baseMember, int derivedMember)
 {
 	// TODO move this to static initialization code
-	derivedTable.baseTable.print = (void (*)(struct Base *))DerivedPrint;
+	derivedTable.print = DerivedPrint;
+	derivedTable.readFromFile = DerivedReadFromFile;
 
-	BaseConstruct(&_this->base, baseMember);
+	BaseConstruct((Base*)_this, baseMember);
 
-	_this->base.vfptr = (BaseTable*)&derivedTable;
-	_this->derivedMember = derivedMember;
+	_this->vfptr = &derivedTable;
+	_this->data.derivedMember = derivedMember;
 }
 
 void DerivedDestroy(Derived *_this)
