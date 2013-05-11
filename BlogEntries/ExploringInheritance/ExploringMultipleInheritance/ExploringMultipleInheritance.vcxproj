@@ -85,6 +85,7 @@
   <ItemGroup>
     <ClCompile Include="AnotherBase.c" />
     <ClCompile Include="Base.c" />
+    <ClCompile Include="Derived.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

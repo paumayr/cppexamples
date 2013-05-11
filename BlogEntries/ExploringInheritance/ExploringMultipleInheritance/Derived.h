@@ -31,3 +31,6 @@ typedef struct Derived_t
 	DerivedData derivedData;
 } Derived;
 
+
+void DerivedConstruct(Derived *derived, int baseMember, int anotherBaseMember, int derivedMember);
+void DerivedDestruct(Derived *derived);

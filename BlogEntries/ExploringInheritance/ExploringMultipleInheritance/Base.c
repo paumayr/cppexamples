@@ -5,7 +5,7 @@ BaseTable baseTable;
 
 void BasePrint(Base *_this)
 {
-	printf("Base::print, baseMember = %d", _this->data.baseMember);
+	printf("Base::print, baseMember = %d\n", _this->data.baseMember);
 }
 
 void BaseConstruct(Base *_this, int baseMember)

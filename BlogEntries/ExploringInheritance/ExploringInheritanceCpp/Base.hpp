@@ -9,6 +9,5 @@ public:
 	virtual ~Base();
 
 	int getBaseMember() const;
-
 	virtual void print();
 };

@@ -10,5 +10,4 @@ public:
 	~Base();
 
 	virtual void print();
-
 };
