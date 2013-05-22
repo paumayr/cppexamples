@@ -67,21 +67,17 @@ void MatrixMultiplySerial(std::vector<float>& vC,
 	);
 }
 
- double measure(std::function<void ()> func)
+ std::chrono::milliseconds measure(std::function<void ()> func)
  {
 	func();
 
-	 __int64 ctr1 = 0, ctr2 = 0, freq = 0;
-	if (QueryPerformanceCounter((LARGE_INTEGER *) &ctr1) != 0) 
-	{
-		func();
+	auto start = std::chrono::high_resolution_clock::now();
 
-		QueryPerformanceCounter((LARGE_INTEGER *) &ctr2);
-		QueryPerformanceFrequency((LARGE_INTEGER *) &freq);
-		return  ((ctr2 - ctr1) * 1.0 / freq);
-	}
+	func();
 
-	return -1.0;
+	auto end = std::chrono::high_resolution_clock::now();
+	auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+	return elapsed;
  }
 
 void TestMatrixAmp()
@@ -104,6 +100,6 @@ void TestMatrixAmp()
 	auto serial = measure([&]() { MatrixMultiplySerial(multed, lh, rh, width, height, width); });
 	auto amp = measure([&]() { MatrixMultiplySimple(multed, lh, rh, width, height, width); });
 
-	std::cout << "serial took " << serial << "s, amp took: " << amp << std::endl;
+	std::cout << "serial took " << serial.count() << "ms, amp took: " << amp.count() << "ms" << std::endl;
 
 }

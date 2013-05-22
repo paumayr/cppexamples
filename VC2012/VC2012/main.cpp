@@ -59,15 +59,13 @@ void runPerfTest()
 {
 	perfTest();
 
-	 __int64 ctr1 = 0, ctr2 = 0, freq = 0;
-	if (QueryPerformanceCounter((LARGE_INTEGER *) &ctr1) != 0) 
-	{
-		perfTest();
+	auto start = std::chrono::high_resolution_clock::now();
 
-		QueryPerformanceCounter((LARGE_INTEGER *) &ctr2);
-		QueryPerformanceFrequency((LARGE_INTEGER *) &freq);
-		std::cout << "code took: " <<  ((ctr2 - ctr1) * 1.0 / freq) << " s" << std::endl;
-	}
+	perfTest();
+
+	auto end = std::chrono::high_resolution_clock::now();
+	auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+	std::cout << "code took: " <<  elapsed.count() << "ms" << std::endl;
 }
 
 void printCollectionSizes()
@@ -84,12 +82,12 @@ int main(int argc, char**argv)
 {
 	using namespace std;
 
-	//runPerfTest();
+	runPerfTest();
 	//printCollectionSizes();
 
 	//CppAmpMethod();
 
-	TestMatrixAmp();
+	//TestMatrixAmp();
 
 	std::cin.get();
 }
