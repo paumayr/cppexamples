@@ -35,13 +35,13 @@ void ComplexCalculation()
 {
 	int * daten = new int[1000];
 
-	StackMonitor sm;
+	//StackMonitor sm;
 
 	readFile(daten, "filename");
 
-	squareRoot(100.0f);
+	squareRoot(-100.0f);
 
-	throw int(10);
+	//throw int(10);
 
 	delete[] daten;
 }

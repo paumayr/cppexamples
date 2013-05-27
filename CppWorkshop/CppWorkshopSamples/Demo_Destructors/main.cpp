@@ -29,6 +29,7 @@ int main(int argc, char **argv)
 	std::cout << "entering main" << std::endl;
 
 	NoisyClass a("a");
+	NoisyClass a1("a1");
 
 	{
 		std::cout << "opened new scoped" << std::endl;

@@ -5,10 +5,13 @@ int main(int argc, char **argv)
 {
 	int a = 10;
 	int &refA = a;
+	int *ptrA = &a;
+
 	// a refers to the same object
 	std::cout << "a = " << a << " refA = " << refA << std::endl;
 	// changing the value of the reference, changes the referenced object
 	refA = 12;
+	
 	std::cout << "a = " << a << " refA = " << refA << std::endl;
 
 	int b = 50;

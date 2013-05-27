@@ -9,6 +9,11 @@ public:
 	Fraction(int _above, int _below) : above(_above), below(_below) {}
 };
 
+Fraction add(const Fraction& left, const Fraction& right)
+{
+	return Fraction(left.above * right.below + right.above * left.below, left.below * right.below);
+}
+
 Fraction operator+(Fraction lh, Fraction rh)
 {
 	return Fraction(lh.above * rh.below + rh.above * lh.below, lh.below * rh.below);
@@ -40,7 +45,8 @@ int main(int argc, char **argv)
 	Fraction a(4, 2);
 	Fraction b(6, 3);
 
-	Fraction add = a + b;
+	Fraction sum = add(a, b);
+	Fraction add = a + b + a;
 	Fraction sub = a - b;
 	Fraction mul = a * b;
 	Fraction div = a / b;
