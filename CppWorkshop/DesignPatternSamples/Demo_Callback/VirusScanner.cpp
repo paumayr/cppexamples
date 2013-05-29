@@ -2,32 +2,21 @@
 #include "VirusScanner.h"
 
 VirusScanner::VirusScanner()
-	: virusesFound(0),
-	callback(nullptr)
+	: virusesFound(0)
 {
 }
 void VirusScanner::runScan()
 {
-	if (callback != nullptr)
-	{
-		callback->onScanStarted();
-	}
+	notifyOnStart();
 
 	for (int i = 0; i < 10000; i++)
 	{
 		if (i == 666)
 		{
 			virusesFound++;
-
-			if (callback != nullptr)
-			{
-				callback->onVirusFound();
-			}
+			notifyOnVirusFound();
 		}
 	}
 
-	if (callback != nullptr)
-	{
-		callback->onScanFinished();
-	}
+	notifyOnFinished();
 }

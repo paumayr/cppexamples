@@ -21,6 +21,13 @@ public:
 	// calculates the area of the shape
 	virtual double calculateArea() const = 0;
 
+
+
+
+
+
+
+
 	virtual void visit(Visitor &visitor) = 0;
 
 	virtual void count(Counter &counter) = 0;

@@ -4,6 +4,7 @@
 
 class Pet
 {
+protected:
 	std::string name;
 public:
 	Pet(const std::string &_name) : name(_name)	{ }
@@ -32,7 +33,7 @@ public:
 	Dog(const std::string& name) : Pet(name) {}
 	
 	virtual void speak() {
-		std::cout << "woof. woof." << std::endl;
+		std::cout << name <<"woof. woof." << std::endl;
 	}
 };
 
@@ -51,5 +52,5 @@ int main(int argc, char **argv)
 	letPetSpeak(spotty);
 
 	// ERROR, cannot instantiate abstract class
-	//Pet somePet;
+	//Pet somePet("somepet");
 }

@@ -7,14 +7,13 @@
 
 int main(int argc, char **argv)
 {
-	ConsoleCallback callback;
-
-	FileLoggerCallback fileLoggerCallback("virusscanlogfile.log");
-
+	ConsoleCallback consoleCallback;
+	FileLoggerCallback fileLogger("viruslogfile.txt");
 	VirusScanner scanner;
 
 	// set callback
-	scanner.callback = &fileLoggerCallback;
+	scanner.registerCallback(&consoleCallback);
+	scanner.registerCallback(&fileLogger);
 
 	scanner.runScan();
 	return 0;

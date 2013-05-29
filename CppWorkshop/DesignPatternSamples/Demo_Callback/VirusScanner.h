@@ -1,13 +1,12 @@
 #pragma once
 
-#include "VirusScanCallback.hpp"
+#include "VirusScanSubject.hpp"
+#include <vector>
 
-class VirusScanner
+class VirusScanner : public VirusScanSubject
 {
 public:
 	int virusesFound;
-
-	VirusScanCallback *callback;
 
 	VirusScanner();
 	void runScan();

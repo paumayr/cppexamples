@@ -11,13 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AA3BB26C-97BF-4734-A26C-AF0C6A41E695}</ProjectGuid>
-    <SccProjectName>SAK</SccProjectName>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccProvider>SAK</SccProvider>
+    <ProjectGuid>{212CFD62-E914-4BF7-A1CB-58935755CD81}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Demo_Callback</RootNamespace>
+    <RootNamespace>Demo_SharedPointer</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -82,18 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CallbackExample.cpp" />
-    <ClCompile Include="ConsoleCallback.cpp" />
-    <ClCompile Include="FileLoggerCallback.cpp" />
-    <ClCompile Include="VirusScanner.cpp" />
-    <ClCompile Include="VirusScanSubject.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ConsoleCallback.hpp" />
-    <ClInclude Include="FileLoggerCallback.hpp" />
-    <ClInclude Include="VirusScanCallback.hpp" />
-    <ClInclude Include="VirusScanner.h" />
-    <ClInclude Include="VirusScanSubject.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

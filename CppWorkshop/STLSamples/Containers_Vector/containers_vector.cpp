@@ -6,13 +6,23 @@
 using namespace std;
 
 // print vector to output stream
-ostream& operator<<(ostream &os, const vector<int>& v)
+/*ostream& operator<<(ostream &os, const vector<int>& v)
 {
 	os << "v =";
 	for_each(begin(v), end(v), 
 		[&] (int x) { os << " " << x ; });
 	os << endl;
 	return os;
+}*/
+
+void printvector(std::vector<int> v)
+{
+	for(int i = 0; i < v.size(); i++)
+	{
+		std::cout << v[i] << ", ";
+	}
+
+	std::cout << std::endl;
 }
 
 int main(int argc, char **argv)
@@ -24,13 +34,13 @@ int main(int argc, char **argv)
 	v.push_back(20);
 
 	// v now contains 2 ints, 10 and 20
-	cout << v;
+	printvector(v);
 
 	// elements can be popped from the back
 	v.pop_back();
 
 	// v now contains 1 int, 1
-	cout << v;
+	printvector(v);
 
 	// vector can be constructed with n elements of the same value ( vector(count, value) )
 	vector<int> v2(10, 42);
@@ -39,13 +49,13 @@ int main(int argc, char **argv)
 	v.insert(v.end(), v2.begin(), v2.end());
 
 	// v now contains 11 elements, 1, and 10x 42
-	cout << v;
+	printvector(v);
 
 	// vectors can be cleared, keeps the memory buffer...
 	v.clear();
 
 	// v is now empty
-	cout << v;
+	printvector(v);
 	cout << "v.empty() = " << v.empty() << std::endl;
 
 	// the capacity of the vector remains
@@ -64,7 +74,7 @@ int main(int argc, char **argv)
 	v.erase(remove(begin(v), end(v), 1), end(v));
 
 	// v now contains 10 x 42
-	cout << v;
+	printvector(v);
 
 	int *firstelem = &v[0];
 	int *secondelem = &v[1];

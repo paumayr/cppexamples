@@ -28,6 +28,10 @@ public:
 	// not concerned about overlap
 	virtual double calculateArea() const;
 
+
+
+
+
 	virtual void visit(Visitor& visitor);
 
 	virtual void count(Counter &counter)
