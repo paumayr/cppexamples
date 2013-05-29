@@ -114,6 +114,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Preprocessor", "Demo_P
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Casts", "Demo_Casts\Demo_Casts.vcxproj", "{9CC319F9-C74E-40EE-8F6B-22FA0E7B851D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_CompilationProcess", "Demo_CompilationProcess\Demo_CompilationProcess.vcxproj", "{CD3699ED-86EF-4EDE-8F08-286AE8449442}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Strings", "Demo_Strings\Demo_Strings.vcxproj", "{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_SharedFromThis", "Demo_SharedFromThis\Demo_SharedFromThis.vcxproj", "{785FD295-1847-41E2-B512-EECEE733DAD8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_WeakPtr", "Demo_WeakPtr\Demo_WeakPtr.vcxproj", "{8E2E6A2A-1D95-4063-871C-6CCB11F61232}"
@@ -340,6 +344,14 @@ Global
 		{8E2E6A2A-1D95-4063-871C-6CCB11F61232}.Debug|Win32.Build.0 = Debug|Win32
 		{8E2E6A2A-1D95-4063-871C-6CCB11F61232}.Release|Win32.ActiveCfg = Release|Win32
 		{8E2E6A2A-1D95-4063-871C-6CCB11F61232}.Release|Win32.Build.0 = Release|Win32
+		{CD3699ED-86EF-4EDE-8F08-286AE8449442}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD3699ED-86EF-4EDE-8F08-286AE8449442}.Debug|Win32.Build.0 = Debug|Win32
+		{CD3699ED-86EF-4EDE-8F08-286AE8449442}.Release|Win32.ActiveCfg = Release|Win32
+		{CD3699ED-86EF-4EDE-8F08-286AE8449442}.Release|Win32.Build.0 = Release|Win32
+		{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}.Debug|Win32.Build.0 = Debug|Win32
+		{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}.Release|Win32.ActiveCfg = Release|Win32
+		{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

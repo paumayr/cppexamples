@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Composite1", "Demo_Composite1\Demo_Composite1.vcxproj", "{0B01ED07-8A7B-4BDA-95A5-B7CA4102423C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Visitor1", "Demo_Visitor1\Demo_Visitor1.vcxproj", "{4F3863CA-FD0B-4D07-BAE4-FA58EA64A3E2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_AbstractFactory1", "Demo_AbstractFactory1\Demo_AbstractFactory1.vcxproj", "{01BB6EBB-7A2D-4AFC-963B-4236CC7E32DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Singleton", "Demo_Singleton\Demo_Singleton.vcxproj", "{404DC8D5-8D4C-4CDB-A3AB-76A34CDC96E5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Observer", "Demo_Observer\Demo_Observer.vcxproj", "{C025A9FD-B2DF-447D-A21C-E701EEFF6FED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment_RenderGraph1", "Assignment_RenderGraph1\Assignment_RenderGraph1.vcxproj", "{AA04E829-DD5B-4599-B55A-A37A58E78F54}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment_RenderGraph2", "Assignment_RenderGraph2\Assignment_RenderGraph2.vcxproj", "{91275E9D-113D-4FF7-A961-787A64F24C5E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment_RenderGraph3", "Assignment_RenderGraph3\Assignment_RenderGraph3.vcxproj", "{0FFBDF6D-3EBF-4651-B19A-B8DF84919AF8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment_Rendergraph4", "Assignment_Rendergraph4\Assignment_Rendergraph4.vcxproj", "{0460C99F-3C6C-4959-8DAF-03904C1E1CFC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment_RobotControl", "Assignment_RobotControl\Assignment_RobotControl.vcxproj", "{DBCD2E66-4108-42F6-87F2-3C878B30BBDE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Callback", "Demo_Callback\Demo_Callback.vcxproj", "{AA3BB26C-97BF-4734-A26C-AF0C6A41E695}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://intranet.software-architects.at:1443/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Demo_Composite1\\Demo_Composite1.vcxproj
+		SccProjectName1 = Demo_Composite1
+		SccLocalPath1 = Demo_Composite1
+		SccProjectUniqueName2 = Demo_Visitor1\\Demo_Visitor1.vcxproj
+		SccProjectName2 = Demo_Visitor1
+		SccLocalPath2 = Demo_Visitor1
+		SccProjectUniqueName3 = Demo_AbstractFactory1\\Demo_AbstractFactory1.vcxproj
+		SccProjectName3 = Demo_AbstractFactory1
+		SccLocalPath3 = Demo_AbstractFactory1
+		SccProjectUniqueName4 = Assignment_RenderGraph3\\Assignment_RenderGraph3.vcxproj
+		SccProjectName4 = Assignment_RenderGraph3
+		SccLocalPath4 = Assignment_RenderGraph3
+		SccProjectUniqueName5 = Assignment_RenderGraph2\\Assignment_RenderGraph2.vcxproj
+		SccProjectName5 = Assignment_RenderGraph2
+		SccLocalPath5 = Assignment_RenderGraph2
+		SccProjectUniqueName6 = Assignment_RenderGraph1\\Assignment_RenderGraph1.vcxproj
+		SccProjectName6 = Assignment_RenderGraph1
+		SccLocalPath6 = Assignment_RenderGraph1
+		SccProjectUniqueName7 = Demo_Observer\\Demo_Observer.vcxproj
+		SccProjectName7 = Demo_Observer
+		SccLocalPath7 = Demo_Observer
+		SccProjectUniqueName8 = Demo_Singleton\\Demo_Singleton.vcxproj
+		SccProjectName8 = Demo_Singleton
+		SccLocalPath8 = Demo_Singleton
+		SccProjectUniqueName9 = Assignment_Rendergraph4\\Assignment_Rendergraph4.vcxproj
+		SccProjectName9 = Assignment_Rendergraph4
+		SccLocalPath9 = Assignment_Rendergraph4
+		SccProjectUniqueName10 = Assignment_RobotControl\\Assignment_RobotControl.vcxproj
+		SccProjectName10 = Assignment_RobotControl
+		SccLocalPath10 = Assignment_RobotControl
+		SccProjectUniqueName11 = Demo_Callback\\Demo_Callback.vcxproj
+		SccProjectName11 = Demo_Callback
+		SccLocalPath11 = Demo_Callback
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B01ED07-8A7B-4BDA-95A5-B7CA4102423C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0B01ED07-8A7B-4BDA-95A5-B7CA4102423C}.Debug|Win32.Build.0 = Debug|Win32
+		{0B01ED07-8A7B-4BDA-95A5-B7CA4102423C}.Release|Win32.ActiveCfg = Release|Win32
+		{0B01ED07-8A7B-4BDA-95A5-B7CA4102423C}.Release|Win32.Build.0 = Release|Win32
+		{4F3863CA-FD0B-4D07-BAE4-FA58EA64A3E2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F3863CA-FD0B-4D07-BAE4-FA58EA64A3E2}.Debug|Win32.Build.0 = Debug|Win32
+		{4F3863CA-FD0B-4D07-BAE4-FA58EA64A3E2}.Release|Win32.ActiveCfg = Release|Win32
+		{4F3863CA-FD0B-4D07-BAE4-FA58EA64A3E2}.Release|Win32.Build.0 = Release|Win32
+		{01BB6EBB-7A2D-4AFC-963B-4236CC7E32DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{01BB6EBB-7A2D-4AFC-963B-4236CC7E32DD}.Debug|Win32.Build.0 = Debug|Win32
+		{01BB6EBB-7A2D-4AFC-963B-4236CC7E32DD}.Release|Win32.ActiveCfg = Release|Win32
+		{01BB6EBB-7A2D-4AFC-963B-4236CC7E32DD}.Release|Win32.Build.0 = Release|Win32
+		{404DC8D5-8D4C-4CDB-A3AB-76A34CDC96E5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{404DC8D5-8D4C-4CDB-A3AB-76A34CDC96E5}.Debug|Win32.Build.0 = Debug|Win32
+		{404DC8D5-8D4C-4CDB-A3AB-76A34CDC96E5}.Release|Win32.ActiveCfg = Release|Win32
+		{404DC8D5-8D4C-4CDB-A3AB-76A34CDC96E5}.Release|Win32.Build.0 = Release|Win32
+		{C025A9FD-B2DF-447D-A21C-E701EEFF6FED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C025A9FD-B2DF-447D-A21C-E701EEFF6FED}.Debug|Win32.Build.0 = Debug|Win32
+		{C025A9FD-B2DF-447D-A21C-E701EEFF6FED}.Release|Win32.ActiveCfg = Release|Win32
+		{C025A9FD-B2DF-447D-A21C-E701EEFF6FED}.Release|Win32.Build.0 = Release|Win32
+		{AA04E829-DD5B-4599-B55A-A37A58E78F54}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AA04E829-DD5B-4599-B55A-A37A58E78F54}.Debug|Win32.Build.0 = Debug|Win32
+		{AA04E829-DD5B-4599-B55A-A37A58E78F54}.Release|Win32.ActiveCfg = Release|Win32
+		{AA04E829-DD5B-4599-B55A-A37A58E78F54}.Release|Win32.Build.0 = Release|Win32
+		{91275E9D-113D-4FF7-A961-787A64F24C5E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{91275E9D-113D-4FF7-A961-787A64F24C5E}.Debug|Win32.Build.0 = Debug|Win32
+		{91275E9D-113D-4FF7-A961-787A64F24C5E}.Release|Win32.ActiveCfg = Release|Win32
+		{91275E9D-113D-4FF7-A961-787A64F24C5E}.Release|Win32.Build.0 = Release|Win32
+		{0FFBDF6D-3EBF-4651-B19A-B8DF84919AF8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0FFBDF6D-3EBF-4651-B19A-B8DF84919AF8}.Debug|Win32.Build.0 = Debug|Win32
+		{0FFBDF6D-3EBF-4651-B19A-B8DF84919AF8}.Release|Win32.ActiveCfg = Release|Win32
+		{0FFBDF6D-3EBF-4651-B19A-B8DF84919AF8}.Release|Win32.Build.0 = Release|Win32
+		{0460C99F-3C6C-4959-8DAF-03904C1E1CFC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0460C99F-3C6C-4959-8DAF-03904C1E1CFC}.Debug|Win32.Build.0 = Debug|Win32
+		{0460C99F-3C6C-4959-8DAF-03904C1E1CFC}.Release|Win32.ActiveCfg = Release|Win32
+		{0460C99F-3C6C-4959-8DAF-03904C1E1CFC}.Release|Win32.Build.0 = Release|Win32
+		{DBCD2E66-4108-42F6-87F2-3C878B30BBDE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DBCD2E66-4108-42F6-87F2-3C878B30BBDE}.Debug|Win32.Build.0 = Debug|Win32
+		{DBCD2E66-4108-42F6-87F2-3C878B30BBDE}.Release|Win32.ActiveCfg = Release|Win32
+		{DBCD2E66-4108-42F6-87F2-3C878B30BBDE}.Release|Win32.Build.0 = Release|Win32
+		{AA3BB26C-97BF-4734-A26C-AF0C6A41E695}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AA3BB26C-97BF-4734-A26C-AF0C6A41E695}.Debug|Win32.Build.0 = Debug|Win32
+		{AA3BB26C-97BF-4734-A26C-AF0C6A41E695}.Release|Win32.ActiveCfg = Release|Win32
+		{AA3BB26C-97BF-4734-A26C-AF0C6A41E695}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

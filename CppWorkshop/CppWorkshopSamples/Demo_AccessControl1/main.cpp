@@ -5,6 +5,7 @@ class SomeClass
 public:
 	SomeClass() : publicmember(10), privatemember(5) {};
 
+public:
 	int publicmember;
 
 private:
@@ -15,6 +16,7 @@ public:
 		// member function can access public and private
 		return publicmember + privatemember;
 	}
+
 };
 
 int main(int argc, char **argv)

@@ -6,7 +6,8 @@ public:
 	int above;
 	int below;
 
-	Fraction(int _above, int _below) : above(_above), below(_below) {}
+	Fraction(int _above, int _below) 
+		: above(_above), below(_below) {}
 
 	void operator+= (Fraction rh) {
 		above = above * rh.below + rh.above * below;
@@ -41,7 +42,8 @@ int main(int argc, char **argv)
 	Fraction b(6, 3);
 
 	std::cout << "before: " << a << std::endl;
-	a += Fraction(1, 2);
+	auto half = Fraction(1, 2);
+	a += half;
 	std::cout << "after add: " << a << std::endl;
 	a -= Fraction(1, 2);
 	std::cout << "after subtract: " << a << std::endl;

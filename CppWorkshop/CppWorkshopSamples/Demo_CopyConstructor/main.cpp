@@ -5,18 +5,25 @@ using namespace std;
 
 class CopyCat
 {
-	string name;
 public:
+	string name;
 	CopyCat(string _name) : name(_name)	{}
 
 	// copy constructor
 	CopyCat(CopyCat& other) : name("copy of " + other.name) {}
-	string& getName() { return name; }
 };
+
+
+void copycatfunc(CopyCat &somecopycat)
+{
+	std::cout << somecopycat.name << std::endl;
+}
 
 int main(int argc, char **argv)
 {
 	CopyCat a ("ticky");
+
+	copycatfunc(a);
 
 	// copy constructor
 	CopyCat b (a);
@@ -27,9 +34,9 @@ int main(int argc, char **argv)
 
 	d = a;
 
-	std::cout << "name of a: " << a.getName() << std::endl;
-	std::cout << "name of b: " << b.getName() << std::endl;
-	std::cout << "name of c: " << c.getName() << std::endl;
+	std::cout << "name of a: " << a.name << std::endl;
+	std::cout << "name of b: " << b.name << std::endl;
+	std::cout << "name of c: " << c.name << std::endl;
 	
-	std::cout << "name of d: " << d.getName() << std::endl;
+	std::cout << "name of d: " << d.name << std::endl;
 }
