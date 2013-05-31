@@ -1,4 +1,5 @@
 
+// THIS EXAMPLE IS NOT FINISHED (not even really started)
 
 class Person
 {
@@ -48,6 +49,10 @@ public:
 	{
 		return 12 * (5000);
 	}
-}
+};
 
+
+// NOTE: This example is not ready.
+int main(int argc, char **argv)
+{
 }
