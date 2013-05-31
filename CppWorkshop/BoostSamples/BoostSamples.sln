@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BoostSamples", "BoostSamples\BoostSamples.vcxproj", "{29F83E1B-56EE-4C45-A3C9-9E801B59FFEB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AsioTimers", "AsioTimers\AsioTimers.vcxproj", "{C11D4F3C-09CE-442D-AF48-949C2FE48991}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AsioAsyncServer", "AsioAsyncServer\AsioAsyncServer.vcxproj", "{34D9DA83-D6CA-4C6B-93DD-4D5503EAB342}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AsioAsyncClient", "AsioAsyncClient\AsioAsyncClient.vcxproj", "{33A856A2-6FF5-4DD0-98BF-38F92FD5569E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29F83E1B-56EE-4C45-A3C9-9E801B59FFEB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{29F83E1B-56EE-4C45-A3C9-9E801B59FFEB}.Debug|Win32.Build.0 = Debug|Win32
+		{29F83E1B-56EE-4C45-A3C9-9E801B59FFEB}.Release|Win32.ActiveCfg = Release|Win32
+		{29F83E1B-56EE-4C45-A3C9-9E801B59FFEB}.Release|Win32.Build.0 = Release|Win32
+		{C11D4F3C-09CE-442D-AF48-949C2FE48991}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C11D4F3C-09CE-442D-AF48-949C2FE48991}.Debug|Win32.Build.0 = Debug|Win32
+		{C11D4F3C-09CE-442D-AF48-949C2FE48991}.Release|Win32.ActiveCfg = Release|Win32
+		{C11D4F3C-09CE-442D-AF48-949C2FE48991}.Release|Win32.Build.0 = Release|Win32
+		{34D9DA83-D6CA-4C6B-93DD-4D5503EAB342}.Debug|Win32.ActiveCfg = Debug|Win32
+		{34D9DA83-D6CA-4C6B-93DD-4D5503EAB342}.Debug|Win32.Build.0 = Debug|Win32
+		{34D9DA83-D6CA-4C6B-93DD-4D5503EAB342}.Release|Win32.ActiveCfg = Release|Win32
+		{34D9DA83-D6CA-4C6B-93DD-4D5503EAB342}.Release|Win32.Build.0 = Release|Win32
+		{33A856A2-6FF5-4DD0-98BF-38F92FD5569E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{33A856A2-6FF5-4DD0-98BF-38F92FD5569E}.Debug|Win32.Build.0 = Debug|Win32
+		{33A856A2-6FF5-4DD0-98BF-38F92FD5569E}.Release|Win32.ActiveCfg = Release|Win32
+		{33A856A2-6FF5-4DD0-98BF-38F92FD5569E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
