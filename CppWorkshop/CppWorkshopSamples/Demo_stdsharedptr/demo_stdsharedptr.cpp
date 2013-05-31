@@ -1,4 +1,6 @@
 #include <memory>
+#include <vector>
+
 
 class vector3
 {
@@ -14,15 +16,28 @@ std::shared_ptr<vector3> createVector()
 	return v;
 }
 
+void legacyCode(const vector3 *ptr)
+{
+}
+
 int main(int argc, char **argv)
 {
-	typedef std::shared_ptr<vector3> vector3ptr;
+	std::shared_ptr<float> arr[10];
+
+	{
+		//typedef std::shared_ptr<vector3> vector3ptr;
+		std::tr1::shared_ptr<float> x;
+		std::shared_ptr<float> y;
+
+		y = x;
+	}
+
 
 	vector3* oldptr;
-	vector3ptr v;
+	std::shared_ptr<vector3> v;
 
-	vector3ptr ptrVec3(new vector3());
-	vector3ptr ptrVec4 = ptrVec3;
+	std::shared_ptr<vector3> ptrVec3(new vector3());
+	std::shared_ptr<vector3> ptrVec4 = ptrVec3;
 
-	vector3ptr x = createVector();
+	std::shared_ptr<vector3> x = createVector();
 }

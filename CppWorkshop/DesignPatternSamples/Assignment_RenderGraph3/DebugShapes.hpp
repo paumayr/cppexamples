@@ -14,6 +14,13 @@ public:
 	{
 	}
 
+	virtual double calculateArea() const
+	{
+		std::cout << "calculating area for Circle" << std::endl;
+		return Circle::calculateArea();
+	}
+
+
 	virtual void accept(ShapeVisitor &visitor)
 	{
 		std::cout << "before Circle::accept" << std::endl;

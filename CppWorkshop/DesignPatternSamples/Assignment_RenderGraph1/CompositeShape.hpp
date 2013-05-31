@@ -13,6 +13,8 @@ typedef std::vector<ShapePtr> ShapeContainer;
 class CompositeShape : public Shape
 {
 	ShapeContainer shapes;
+	// OR std::vector<std::shared_ptr<Shape> > shapes2;
+
 public:
 	void AddShape(ShapePtr shape);
 
