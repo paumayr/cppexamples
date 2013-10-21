@@ -68,7 +68,8 @@ namespace SampleTestProject
 		{
 			{
 				int *myleak = new int[10000];
-				// delete[] myleak;
+				// Uncomment this to trigger memory leak
+				delete[] myleak;
 			}
 
 			_CrtMemDumpAllObjectsSince(NULL);
