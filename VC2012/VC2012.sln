@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VC2012", "VC2012\VC2012.vcxproj", "{8D1950BF-3D21-4757-B6C4-CAB025651BA3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VC2012.Test", "VC2012.Test\VC2012.Test.vcxproj", "{C19CA414-8236-4DF7-A2A9-D9C0EABE97F3}"
@@ -9,25 +11,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VC2012CTP.test", "VC2012CTP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VC2012CTP", "VC2012CTP\VC2012CTP.vcxproj", "{84F7CC87-54E0-477E-A0F7-CDA2D5CA2E1A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SampleTestProject", "SampleTestProject\SampleTestProject.vcxproj", "{B1988E30-6BE7-4A25-90E1-DEDB7226E642}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://silver:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = VC2012\\VC2012.vcxproj
-		SccProjectName1 = VC2012
-		SccLocalPath1 = VC2012
-		SccProjectUniqueName2 = VC2012.Test\\VC2012.Test.vcxproj
-		SccProjectName2 = VC2012.Test
-		SccLocalPath2 = VC2012.Test
-		SccProjectUniqueName3 = VC2012CTP.test\\VC2012CTP.test.vcxproj
-		SccProjectName3 = VC2012CTP.test
-		SccLocalPath3 = VC2012CTP.test
-		SccProjectUniqueName4 = VC2012CTP\\VC2012CTP.vcxproj
-		SccProjectName4 = VC2012CTP
-		SccLocalPath4 = VC2012CTP
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
@@ -49,6 +35,10 @@ Global
 		{84F7CC87-54E0-477E-A0F7-CDA2D5CA2E1A}.Debug|Win32.Build.0 = Debug|Win32
 		{84F7CC87-54E0-477E-A0F7-CDA2D5CA2E1A}.Release|Win32.ActiveCfg = Release|Win32
 		{84F7CC87-54E0-477E-A0F7-CDA2D5CA2E1A}.Release|Win32.Build.0 = Release|Win32
+		{B1988E30-6BE7-4A25-90E1-DEDB7226E642}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B1988E30-6BE7-4A25-90E1-DEDB7226E642}.Debug|Win32.Build.0 = Debug|Win32
+		{B1988E30-6BE7-4A25-90E1-DEDB7226E642}.Release|Win32.ActiveCfg = Release|Win32
+		{B1988E30-6BE7-4A25-90E1-DEDB7226E642}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
