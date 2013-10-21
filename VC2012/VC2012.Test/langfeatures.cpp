@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <functional>
+#include <tuple>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -19,6 +20,44 @@ namespace VC2012Test
 			auto* d = &a;
 
 			Assert::IsNotNull(d);
+		}
+
+		TEST_METHOD(TestAutoMotivation)
+		{
+			{
+				// full typing everything
+				std::vector<std::tuple<int, int, int>> my_collection{};
+				std::tuple<int, int, int> a = std::make_tuple(1, 2, 3);
+				my_collection.push_back(a);
+				for (std::vector<std::tuple<int, int, int>>::iterator it = my_collection.begin(); it != my_collection.end(); ++it)
+				{
+					// do something with tuple.
+				}
+			}
+
+			{
+				// with type def
+				typedef std::tuple<int, int, int> my_tuple_type;
+				typedef std::vector<my_tuple_type> my_collection_type;
+				my_collection_type my_collection;
+				my_tuple_type a = my_tuple_type(1, 2, 3);
+				my_collection.push_back(a);
+				for (my_collection_type::iterator it = my_collection.begin(); it != my_collection.end(); ++it)
+				{
+					// do something with tuple
+				}
+			}
+
+			{
+				// with auto
+				std::vector<std::tuple<int, int, int>> my_collection{};
+				auto a = std::make_tuple(1, 2, 3);
+				my_collection.push_back(a);
+				for (auto it = my_collection.begin(); it != my_collection.end(); ++it)
+				{
+					// do something with tuple
+				}
+			}
 		}
 
 		TEST_METHOD(TestAuto2)

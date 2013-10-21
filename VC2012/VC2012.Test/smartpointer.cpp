@@ -49,9 +49,9 @@ namespace VC2012Test
 
 			{
 				auto driver = unique_ptr<PrinterDriver>();
-				Assert::IsFalse(driver); // implicit conversion to bool
+				Assert::IsFalse((bool)driver);
 				driver = unique_ptr<PrinterDriver>(new PrinterDriver());
-				Assert::IsTrue(driver);
+				Assert::IsTrue(driver != nullptr);
 
 				// cannot copy!
 				// auto copyOfDriver = driver;
@@ -78,7 +78,7 @@ namespace VC2012Test
 
 			{
 				auto driver = shared_ptr<PrinterDriver>();
-				Assert::IsFalse(driver);
+				Assert::IsFalse((bool)driver);
 
 				driver.reset(new PrinterDriver());
 
@@ -105,7 +105,7 @@ namespace VC2012Test
 			using namespace std;
 			{
 				auto driver = shared_ptr<PrinterDriver>();
-				Assert::IsFalse(driver);
+				Assert::IsFalse(driver != nullptr);
 
 				// more efficient version, only requires a single memory allocation.
 				driver = make_shared<PrinterDriver>();
