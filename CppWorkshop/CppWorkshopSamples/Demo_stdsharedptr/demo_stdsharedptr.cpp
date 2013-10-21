@@ -16,24 +16,8 @@ std::shared_ptr<vector3> createVector()
 	return v;
 }
 
-void legacyCode(const vector3 *ptr)
-{
-}
-
 int main(int argc, char **argv)
 {
-	std::shared_ptr<float> arr[10];
-
-	{
-		//typedef std::shared_ptr<vector3> vector3ptr;
-		std::tr1::shared_ptr<float> x;
-		std::shared_ptr<float> y;
-
-		y = x;
-	}
-
-
-	vector3* oldptr;
 	std::shared_ptr<vector3> v;
 
 	std::shared_ptr<vector3> ptrVec3(new vector3());

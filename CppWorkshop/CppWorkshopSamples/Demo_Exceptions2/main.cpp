@@ -14,11 +14,12 @@ struct my_other_exception : public std::exception
 
 int main(int argc, char **argv)
 {
-	std::tr1::shared_ptr<int> b;
+	std::shared_ptr<int> b;
 	try
 	{
-		std::tr1::shared_ptr<int> pointerToInt = std::tr1::shared_ptr<int>(new int(100));
+		std::shared_ptr<int> pointerToInt = std::shared_ptr<int>(new int(100));
 		b = pointerToInt;
+		throw my_exception();
 		std::cout << "this line will never be reached" << std::endl;
 	}
 	catch(my_exception &ex)
