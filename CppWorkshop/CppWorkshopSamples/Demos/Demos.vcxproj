@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algorithms.cpp" />
+    <ClCompile Include="async.cpp" />
     <ClCompile Include="custom_deleter.cpp" />
     <ClCompile Include="move_semantics.cpp" />
     <ClCompile Include="move_semantics2.cpp" />
@@ -96,6 +97,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="thread_support.cpp" />
     <ClCompile Include="unique_pointer.cpp" />
     <ClCompile Include="variadic_templates.cpp" />
   </ItemGroup>

@@ -50,5 +50,11 @@
     <ClCompile Include="variadic_templates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="async.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_support.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
