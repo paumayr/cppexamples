@@ -20,8 +20,8 @@ namespace Demos
 		};
 		std::shared_ptr<FILE> OpenFile()
 		{
-			FILE *f = fopen("c:\\temp\\Somefile.txt", "r");
-			if (f != 0)
+			FILE *f;
+			if (fopen_s(&f, "c:\\temp\\Somefile.txt", "r") == 0)
 			{
 				return std::unique_ptr<FILE, CloseFileHandler>(f);
 			}
