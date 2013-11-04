@@ -59,5 +59,8 @@
     <ClCompile Include="threading.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="atomics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

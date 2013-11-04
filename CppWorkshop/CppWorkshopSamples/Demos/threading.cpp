@@ -53,20 +53,5 @@ namespace Demos
 
 			Assert::AreEqual(200u, results.size());
 		}
-
-		/*
-		test condition variable
-		*/
-		static void worker_thread_3(mutex &m, std::queue<int> input, std::queue<int> output)
-		{
-			{
-
-			}
-		}
-
-		TEST_METHOD(TestConditionVariable)
-		{
-
-		}
 	};
 }
