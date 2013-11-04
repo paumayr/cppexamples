@@ -91,6 +91,7 @@
     <ClCompile Include="custom_deleter.cpp" />
     <ClCompile Include="move_semantics.cpp" />
     <ClCompile Include="move_semantics2.cpp" />
+    <ClCompile Include="namespace_alias.cpp" />
     <ClCompile Include="rvalue_references.cpp" />
     <ClCompile Include="shared_ptr.cpp" />
     <ClCompile Include="stdafx.cpp">
