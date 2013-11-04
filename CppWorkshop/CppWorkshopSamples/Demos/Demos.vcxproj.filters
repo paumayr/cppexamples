@@ -65,5 +65,8 @@
     <ClCompile Include="aliasing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="chrono.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
