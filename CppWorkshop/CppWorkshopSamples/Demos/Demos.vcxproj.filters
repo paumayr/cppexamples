@@ -59,10 +59,10 @@
     <ClCompile Include="threading.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="namespace_alias.cpp">
+    <ClCompile Include="atomics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="atomics.cpp">
+    <ClCompile Include="aliasing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
