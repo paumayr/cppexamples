@@ -88,6 +88,7 @@
   <ItemGroup>
     <ClCompile Include="algorithms.cpp" />
     <ClCompile Include="async.cpp" />
+    <ClCompile Include="atomics.cpp" />
     <ClCompile Include="custom_deleter.cpp" />
     <ClCompile Include="move_semantics.cpp" />
     <ClCompile Include="move_semantics2.cpp" />

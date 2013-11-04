@@ -62,5 +62,8 @@
     <ClCompile Include="namespace_alias.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="atomics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
