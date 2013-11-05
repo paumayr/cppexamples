@@ -8,7 +8,6 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
 
-
 TEST_CLASS(TestChrono)
 {
 	TEST_METHOD(TestSystemClock)

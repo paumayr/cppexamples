@@ -337,12 +337,10 @@ TEST_CLASS(STLAlgorithms)
 
 		// shuffle elements in vector randomly
 		random_shuffle(begin(vec), end(vec));
-
 		Assert::IsFalse(vec2 == vec);
 
 		// sort the elements
 		sort(begin(vec), end(vec));
-
 		Assert::IsTrue(vec2 == vec);
 	}
 

@@ -71,5 +71,11 @@
     <ClCompile Include="lambdas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="old_new.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uniform_initialization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
