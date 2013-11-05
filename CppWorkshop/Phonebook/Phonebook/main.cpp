@@ -30,6 +30,10 @@ class phonebook
 {
 public:
 	vector<phonebook_entry> entries;
+	phonebook() = default;
+	phonebook(initializer_list<phonebook_entry> elems) 
+		: entries(elems) 
+	{}
 
 	bool remove(phonebook_entry entry)
 	{
