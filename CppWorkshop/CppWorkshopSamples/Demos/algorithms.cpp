@@ -2,10 +2,12 @@
 #include "CppUnitTest.h"
 #include <memory>
 #include <vector>
+#include <list>
 #include <algorithm>
 #include <numeric>
 #include <hash_map>
 #include <tuple>
+#include <stack>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
@@ -31,7 +33,8 @@ TEST_CLASS(STLAlgorithms)
 	TEST_METHOD(TestAllOf)
 	{
 		vector<int> a{ 10, 20, 30, 40, 50, 60, 70, 80, 90 };
-		Assert::IsTrue(all_of(begin(a), end(a), [](int &x) { return x < 100; }));
+		auto result = all_of(begin(a), end(a), [](int &x) { return x < 100; });
+		Assert::IsTrue(result);
 
 
 		Assert::IsFalse(all_of(begin(a), end(a), [](int &x) { return x > 30; }));
@@ -49,6 +52,28 @@ TEST_CLASS(STLAlgorithms)
 		vector<int> a{ 10, 20, 30, 40, 50, 60, 70, 80, 90 };
 		Assert::IsTrue(none_of(begin(a), end(a), [](int &x) { return x > 100; }));
 		Assert::IsFalse(none_of(begin(a), end(a), [](int &x) { return x < 30; }));
+	}
+
+	/*
+	*/
+	TEST_METHOD(TestDistance)
+	{
+		list<int> a{ 10, 20, 30, 40 };
+		auto it1 = begin(a);
+		auto it2 = next(next(a.begin()));
+		auto it3 = next(a.begin());
+
+		Assert::IsTrue(2 == distance(it1, it2));
+		auto d3d1 = distance(it3, it1);
+	}
+
+	TEST_METHOD(TestTransformTarget)
+	{
+		vector<int> v{ 10, 20, 30 };
+		vector<int> doubled;
+
+		copy_if(begin(v), end(v), back_inserter(doubled), 
+				 [](int &x) { return x > 10; });
 	}
 
 	/*
@@ -188,7 +213,7 @@ TEST_CLASS(STLAlgorithms)
 	*/
 	TEST_METHOD(TestUnique)
 	{
-		vector<int> a{ 10, 20, 30, 30, 30, 40, 50, 50, 60, 60, 60, 70, 70, 80, 90 };
+		vector<int> a{ 10, 20, 30, 20, 30, 40, 50, 50, 60, 60, 60, 70, 70, 80, 90 };
 		
 		// remove-erase paradigm!
 		auto newLogicalEnd = std::unique(begin(a), end(a));
@@ -263,6 +288,17 @@ TEST_CLASS(STLAlgorithms)
 		Assert::IsTrue(expected == a);
 	}
 
+	TEST_METHOD(TestErase)
+	{
+		vector<int> v{ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 };
+	
+		v.erase(find(begin(v), end(v), 20), 
+			find(begin(v), end(v), 70));
+
+		vector<int> expected{ 0, 10, 70, 80, 90 };
+		Assert::IsTrue(v == expected);
+	}
+
 	TEST_METHOD(TestRemoveIf)
 	{
 		vector<int> a{ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 };
@@ -289,7 +325,9 @@ TEST_CLASS(STLAlgorithms)
 
 		// remove elements less than 35
 		// erase from the new end
-		a.erase(remove_if(begin(a), end(a), [](int &x) { return x < 35; }), a.end());
+		a.erase(remove_if(begin(a), end(a), 
+				[](int &x) { return x < 35; }), 
+				a.end());
 
 		// a now has all elements > 35
 		vector<int> expected{ 40, 50, 60, 70, 80, 90 };
@@ -342,6 +380,10 @@ TEST_CLASS(STLAlgorithms)
 		// sort the elements
 		sort(begin(vec), end(vec));
 		Assert::IsTrue(vec2 == vec);
+
+		sort(begin(vec), end(vec), [](int &lh, int rh) { return lh > rh; });
+
+	
 	}
 
 	TEST_METHOD(TestLowerBoundAndUpperBound)

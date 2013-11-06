@@ -91,6 +91,7 @@
     <ClCompile Include="atomics.cpp" />
     <ClCompile Include="chrono.cpp" />
     <ClCompile Include="custom_deleter.cpp" />
+    <ClCompile Include="functional.cpp" />
     <ClCompile Include="lambdas.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="move_semantics.cpp" />
@@ -98,6 +99,7 @@
     <ClCompile Include="aliasing.cpp" />
     <ClCompile Include="MyTestClass.cpp" />
     <ClCompile Include="old_new.cpp" />
+    <ClCompile Include="operator_overload.cpp" />
     <ClCompile Include="rvalue_references.cpp" />
     <ClCompile Include="scl.cpp" />
     <ClCompile Include="shared_ptr.cpp" />
