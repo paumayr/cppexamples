@@ -41,6 +41,9 @@ int main(int argc, char **argv)
 {
 	auto instance = HeapObject::create();
 
+	vector<shared_ptr<HeapObject>> asdf;
+	instance->add_to_collection(asdf);
+
 	// cannot create a copy on the stack
 	// does not compile: auto copy = *instance;
 

@@ -4,7 +4,7 @@
 #include <vector>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-
+using namespace std;
 namespace Demos
 {
 	class MyNoisyClass
@@ -77,6 +77,15 @@ namespace Demos
 
 			// Call site
 			const auto newData = ReadDataFromFile("filename.txt");
+		}
+
+		TEST_METHOD(TestMoveVector)
+		{
+			vector<int> x{ 10, 20, 30, 40, 50, 50 };
+
+			std::move(x);
+
+			//auto y = std::move(x);
 		}
 	};
 }

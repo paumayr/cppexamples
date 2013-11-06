@@ -5,6 +5,8 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
+using namespace std;
+
 namespace Demos
 {		
 	TEST_CLASS(UniquePointer)
@@ -32,17 +34,24 @@ namespace Demos
 		};
 
 
+		static unique_ptr<Person> CreatePerson(string first, string last)
+		{
+			auto ret = make_unique<Person>(first, last);
+			return ret;
+		}
 
 		TEST_METHOD(TestUniquePointer)
 		{
-			{
-				auto philipp = std::unique_ptr<Person>(new Person("Philipp", "Aumayr"));
+			{				
+				auto philipp = unique_ptr<Person>(new Person("Philipp", "Aumayr"));
 
 				// unique pointer cannot be copied:
 				// auto copy_of = philipp;
 
 				// transfer ownership from philipp to other.
 				auto other = std::move(philipp);
+				
+				auto y = CreatePerson("A", "B");
 
 				Assert::IsNull(philipp.get());
 				Assert::IsNotNull(other.get());

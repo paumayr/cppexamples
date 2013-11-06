@@ -48,6 +48,19 @@ TEST_CLASS(TestAsync)
 		Assert::AreEqual(string("File 2 Content"), file2Content);
 	}
 
+	static void someoperation(string msg)
+	{
+		using namespace std::chrono;
+		this_thread::sleep_for(seconds(10));
+		Logger::WriteMessage(msg.c_str());
+	}
+
+	TEST_METHOD(TestSomeOperationAsync)
+	{
+		auto f1 = async(someoperation, "1");
+		auto f2 = async(someoperation, "2");
+	}
+
 	/*
 	Exception in async operation is launched.
 	*/
@@ -62,9 +75,12 @@ TEST_CLASS(TestAsync)
 	{
 		auto future = async(throwsException);
 
+		using namespace std::chrono;
+		this_thread::sleep_for(seconds(5));
+
 		try
 		{
-			future.get();
+			future.wait();
 			Assert::Fail();
 		}
 		catch (std::exception ex)
@@ -139,6 +155,30 @@ TEST_CLASS(TestAsync)
 	}
 
 	/*
+	promise with custom worker thread
+	*/
+	TEST_METHOD(TestPromiseWorkerThread)
+	{
+		promise<int> prom;
+
+		thread t([&]() {
+			int result = 0;
+			for (int i = 1; i <= 100; i++) result += i;
+
+			prom.set_value(result);
+		});
+
+	
+		auto future = prom.get_future();
+
+		// wait for value
+		Assert::AreEqual(5050, future.get());
+
+		// join thread for correctness.
+		t.join();
+	}
+
+	/*
 	shared future
 	*/
 	TEST_METHOD(TestSharedFutureMotivation)
@@ -167,6 +207,8 @@ TEST_CLASS(TestAsync)
 		auto my_future = async([]() { return 42; });
 
 		auto my_shared_future = my_future.share();
+
+		Assert::IsFalse(my_future.valid());
 
 		Assert::AreEqual(42, my_shared_future.get());
 
