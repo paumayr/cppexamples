@@ -79,17 +79,14 @@ public:
 };
 
 
-template<typename Random, typename FitnessFunction>
 class ParticleSwarm
 {
 public:
-	FitnessFunction fitnessFunction;
 	vector4 bestposition;
 	double bestfitness;
 
-	ParticleSwarm(int particleCount, Random r, FitnessFunction f)
-		: particles(particleCount), 
-		fitnessFunction(f)
+	template<typename Random, typename FitnessFunction>
+	ParticleSwarm(int particleCount, Random r, FitnessFunction f) : particles(particleCount)
 	{
 		for (auto & p : particles) p.SetRandom(r, f);
 	}
@@ -97,9 +94,9 @@ public:
 	template<typename VelocityUpdate,
 		typename PositionUpdate,
 		typename FitnessFunction>
-	void Update(VelocityUpdate velocity, PositionUpdate position)
+	void Update(VelocityUpdate velocity, PositionUpdate position, FitnessFunction fitness)
 	{
-		for (auto &p : particles) p.Update(velocity, position, fitnessFunction);
+		for (auto &p : particles) p.Update(velocity, position, fitness);
 
 		auto best = min_element(begin(particles), end(particles),
 									[](Particle &lh, Particle &rh)
@@ -149,7 +146,7 @@ int main(int argc, char **argv)
 
 	for (int i = 0; i < 10; i++)
 	{
-		pso.Update(velocity, position);
+		pso.Update(velocity, position, fitness);
 		std::cout << pso.bestfitness << " at " << pso.bestposition << std::endl;
 	}
 }

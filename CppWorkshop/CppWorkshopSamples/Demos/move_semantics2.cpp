@@ -2,9 +2,12 @@
 #include "CppUnitTest.h"
 #include <memory>
 #include <vector>
+#include <future>
+#include <tuple>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
+
 namespace Demos
 {
 	class MyNoisyClass
@@ -20,10 +23,10 @@ namespace Demos
 		MyNoisyClass(MyNoisyClass &&other) { Logger::WriteMessage("RValue constructor\n"); }
 
 		// copy assignment operator
-		MyNoisyClass &operator=(MyNoisyClass &other) { Logger::WriteMessage("copy assignment operator\n"); }
+		MyNoisyClass &operator=(MyNoisyClass &other) { Logger::WriteMessage("copy assignment operator\n"); return *this; }
 		
 		// RValue assignment operator
-		MyNoisyClass &operator=(MyNoisyClass &&other) { Logger::WriteMessage("RValue assignment operator\n"); }
+		MyNoisyClass &operator=(MyNoisyClass &&other) { Logger::WriteMessage("RValue assignment operator\n"); return *this; }
 	};
 
 	TEST_CLASS(MoveSemantics2)
@@ -86,6 +89,32 @@ namespace Demos
 			std::move(x);
 
 			//auto y = std::move(x);
+		}
+
+		TEST_METHOD(TestLambdaNoisyClass)
+		{
+			auto f1 = async([]() { return std::move(MyNoisyClass()); });
+			auto result = f1.get();
+		}
+
+
+		template<typename ...T>
+		void func1(T &&... arg)
+		{
+			auto t = make_tuple(arg...);
+		}
+
+		template<typename ...T>
+		void func2(T &&... arg)
+		{
+			func1(arg...);
+		}
+
+		TEST_METHOD(TestForwardVsMove)
+		{
+			func2(10, 20, 30);
+			int x = 30;
+			func2(10, x);
 		}
 	};
 }

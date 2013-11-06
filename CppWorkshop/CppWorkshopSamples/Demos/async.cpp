@@ -228,7 +228,7 @@ TEST_CLASS(TestAsync)
 		// get the future from the task
 		auto future_of_task = task.get_future();
 
-		// run the task, note task does not return a value!
+		// run the task, note task does not return a valu!e
 		// packaged_task always fowards to future
 		task();
 

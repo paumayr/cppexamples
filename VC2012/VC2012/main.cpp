@@ -8,16 +8,17 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
+using namespace std;
 void CppAmpMethod();
 void TestMatrixAmp();
 
-float performWork(const float *ca, const float *cb, int size)
+float performWork(const vector<float> &ca, const vector<float> &cb, int size)
 {
 	float redux = 0.0;
-	#pragma loop(no_vector)
+	//#pragma loop(no_vector)
 	for (int i = 0; i < size; i++)
 	{
-		float x = (ca[i] + cb[i]) / 2.0f;
+		float x = sqrtf((ca[i] + cb[i]) * (ca[i] + cb[i])) / 2.0f;
 			
 		redux += x;
 	}
@@ -28,29 +29,25 @@ float performWork(const float *ca, const float *cb, int size)
 
 void perfTest()
 {
-	using namespace std;
 	const int size = 100000;
 
-	float *a = new float[size];
-	float *b = new float[size];
-	float *sum = new float[size];
+	auto a = vector<float>(size);
+	auto b = vector<float>(size);
+	auto sum = vector<float>(size);
 
 	for (int i = 0; i < size; i++)
 	{
 		a[i] = i * 2.0f;
 		b[i] = i * 0.5f;
 	}
-
+	
 	//#pragma loop(hint_parallel(4))
 	//#pragma loop(ivdep)
-	#pragma loop(hint_parallel(0))
+	//#pragma loop(hint_parallel(0))
 	for(int i = 0; i < size; i++)
 	{
 		sum[i] = performWork(a, b, size);
 	}
-
-	delete[] a;
-	delete[] b;
 
 	cout << "sum is : " << sum[13] << endl;
 }
