@@ -11,7 +11,7 @@ int other()
 
 template<typename U, typename V>
 auto my_func(U a, V b) 
-	-> decltype(a + b * other())
+	-> decltype(a + b) // not evaluated, only for type-deduction
 {
 	return a + b;
 }
