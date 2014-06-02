@@ -5,5 +5,5 @@
 class SnowmanHouseBuilder : public ShapeBuilder
 {
 public:
-	virtual std::tr1::shared_ptr<Shape> LoadShape(std::tr1::shared_ptr<ShapeFactory> shapeFactory);
+	virtual std::shared_ptr<Shape> LoadShape(std::shared_ptr<ShapeFactory> shapeFactory);
 };

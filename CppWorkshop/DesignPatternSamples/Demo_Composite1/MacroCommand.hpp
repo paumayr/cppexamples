@@ -5,10 +5,10 @@
 
 class MacroCommand : public Command
 {
-	std::vector<std::tr1::shared_ptr<Command>> commands;
+	std::vector<std::shared_ptr<Command>> commands;
 public:
 	virtual void execute() const;
 
-	void add(std::tr1::shared_ptr<Command> command);
-	void remove(std::tr1::shared_ptr<Command> command);
+	void add(std::shared_ptr<Command> command);
+	void remove(std::shared_ptr<Command> command);
 };

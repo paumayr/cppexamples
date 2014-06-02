@@ -8,7 +8,7 @@
 #include <memory>
 
 using namespace std;
-using namespace std::tr1;
+
 int main(int argc, char ** argv)
 {
 	typedef shared_ptr<Circle> CirclePtr;

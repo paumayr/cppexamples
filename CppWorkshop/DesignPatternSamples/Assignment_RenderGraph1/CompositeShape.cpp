@@ -31,12 +31,12 @@ double CompositeShape::calculateArea() const
 	return sum;
 }
 
-void CompositeShape::visit(Visitor& visitor)
+void CompositeShape::accept(Visitor& visitor)
 {
-	visitor.VisitComposite(*this);
+	visitor.visitComposite(*this);
 
 	for(int i = 0; i < shapes.size(); i++)
 	{
-		shapes[i]->visit(visitor);
+		shapes[i]->accept(visitor);
 	}
 }

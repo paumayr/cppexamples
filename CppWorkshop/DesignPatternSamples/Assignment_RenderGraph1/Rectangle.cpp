@@ -53,7 +53,7 @@ double Rectangle::calculateArea() const
 	return width * height;
 }
 
-void Rectangle::visit(Visitor &visitor)
+void Rectangle::accept(Visitor &visitor)
 {
-	visitor.VisitRectangle(*this);
+	visitor.visitRectangle(*this);
 }

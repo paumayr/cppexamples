@@ -21,14 +21,6 @@ public:
 	// calculates the area of the shape
 	virtual double calculateArea() const = 0;
 
-
-
-
-
-
-
-
-	virtual void visit(Visitor &visitor) = 0;
-
-	virtual void count(Counter &counter) = 0;
+	// provides additional extensions
+	virtual void accept(Visitor &visitor) = 0;
 };

@@ -2,8 +2,7 @@
 #include "CompositeShape.hpp"
 #include "Rectangle.hpp"
 #include "Circle.hpp"
-#include "CountingVisitor.hpp"
-#include "ConsoleOutVisitor.hpp"
+#include "CountVisitor.hpp"
 
 #include <iostream>
 #include <memory>
@@ -54,21 +53,12 @@ int main(int argc, char ** argv)
 {	
 	std::shared_ptr<Shape> scene = CreateScene();
 
-	/*std::cout << "the scene has an area of " << scene->calculateArea() << " square units" << std::endl;
+	std::cout << "the scene has an area of " << scene->calculateArea() << " square units" << std::endl;
 	scene->render();
 
-	CountingVisitor v;
-	scene->visit(v);
+	CountVisitor counter;
 
+	scene->accept(counter);
 
-	Counter counts;
-	counts.circles = 0;
-	counts.rectangles = 0;
-	counts.composites = 0;
-
-	scene->count(counts);*/
-
-	ConsoleOutVisitor cov;
-	scene->visit(cov);
 	return 0;
 }

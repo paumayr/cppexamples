@@ -30,18 +30,6 @@ public:
 	// not concerned about overlap
 	virtual double calculateArea() const;
 
-
-
-
-
-	virtual void visit(Visitor& visitor);
-
-	virtual void count(Counter &counter)
-	{
-		counter.composites++;
-		for(int i = 0; i < shapes.size(); i++)
-		{
-			shapes[i]->count(counter);
-		}
-	}
+	// accepts a visitor.
+	virtual void accept(Visitor& visitor) override;
 };

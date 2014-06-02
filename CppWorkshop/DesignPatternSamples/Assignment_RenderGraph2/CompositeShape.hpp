@@ -6,7 +6,7 @@
 
 class CompositeShape : public Shape
 {
-	typedef std::tr1::shared_ptr<Shape> ShapePtr;
+	typedef std::shared_ptr<Shape> ShapePtr;
 	typedef std::vector<ShapePtr> ShapeContainer;
 
 	ShapeContainer shapes;

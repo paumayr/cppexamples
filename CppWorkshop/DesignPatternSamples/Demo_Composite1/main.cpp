@@ -9,8 +9,8 @@
 using namespace std;
 int main(int argc, char **argv)
 {
-	typedef std::tr1::shared_ptr<Command> CommandPtr;
-	typedef std::tr1::shared_ptr<MacroCommand> MacroCommandPtr; 
+	typedef std::shared_ptr<Command> CommandPtr;
+	typedef std::shared_ptr<MacroCommand> MacroCommandPtr; 
 	
 	CommandPtr sum52 = CommandPtr(new PrintSumCommand(5, 2)); 
 	CommandPtr sum105 = CommandPtr(new PrintSumCommand(10, 5));

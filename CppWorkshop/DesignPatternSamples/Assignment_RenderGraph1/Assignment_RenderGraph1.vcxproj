@@ -89,8 +89,7 @@
   <ItemGroup>
     <ClInclude Include="Circle.hpp" />
     <ClInclude Include="CompositeShape.hpp" />
-    <ClInclude Include="ConsoleOutVisitor.hpp" />
-    <ClInclude Include="CountingVisitor.hpp" />
+    <ClInclude Include="CountVisitor.hpp" />
     <ClInclude Include="Math.hpp" />
     <ClInclude Include="Rectangle.hpp" />
     <ClInclude Include="Shape.hpp" />

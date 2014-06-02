@@ -24,10 +24,5 @@ public:
 	// calculates the area of the shape
 	virtual double calculateArea() const;
 
-	virtual void visit(Visitor &visitor);
-
-	virtual void count(Counter &count)
-	{
-		count.circles++;
-	}
+	virtual void accept(Visitor &visitor) override;
 };

@@ -56,10 +56,7 @@
     <ClInclude Include="Visitor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CountingVisitor.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleOutVisitor.hpp">
+    <ClInclude Include="CountVisitor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

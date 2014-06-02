@@ -46,7 +46,7 @@ double Circle::calculateArea() const
 	return radius * radius * Math::pi;
 }
 
-void Circle::visit(Visitor &visitor)
+void Circle::accept(Visitor &visitor)
 {
-		visitor.VisitCircle(*this);
+	visitor.visitCircle(*this);
 }

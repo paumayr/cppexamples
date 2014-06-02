@@ -10,7 +10,6 @@
 #include <iostream>
 
 using namespace std;
-using namespace std::tr1;
 
 shared_ptr<Shape> InteractiveShapeBuilder::LoadShape(shared_ptr<ShapeFactory> factory)
 {
@@ -37,7 +36,7 @@ shared_ptr<Shape> InteractiveShapeBuilder::createShape(shared_ptr<ShapeFactory> 
 	return 0;
 }
 
-shared_ptr<Shape> InteractiveShapeBuilder::createCircle(std::tr1::shared_ptr<ShapeFactory> factory, int level)
+shared_ptr<Shape> InteractiveShapeBuilder::createCircle(std::shared_ptr<ShapeFactory> factory, int level)
 {
 	// TODO add better error checking here.
 	printIndent(level);
@@ -48,7 +47,7 @@ shared_ptr<Shape> InteractiveShapeBuilder::createCircle(std::tr1::shared_ptr<Sha
 	return shared_ptr<Shape>(factory->CreateCircle(vector2f(x, y), r));
 }
 
-shared_ptr<Shape> InteractiveShapeBuilder::createRectangle(std::tr1::shared_ptr<ShapeFactory> factory, int level)
+shared_ptr<Shape> InteractiveShapeBuilder::createRectangle(std::shared_ptr<ShapeFactory> factory, int level)
 {
 	printIndent(level);
 	float x, y, w, h;
@@ -58,7 +57,7 @@ shared_ptr<Shape> InteractiveShapeBuilder::createRectangle(std::tr1::shared_ptr<
 	return shared_ptr<Shape>(factory->CreateRectangle(vector2f(x, y), w, h));
 }
 
-shared_ptr<Shape> InteractiveShapeBuilder::createComposite(std::tr1::shared_ptr<ShapeFactory> factory, int level)
+shared_ptr<Shape> InteractiveShapeBuilder::createComposite(std::shared_ptr<ShapeFactory> factory, int level)
 {
 	bool keepAdding = true;
 

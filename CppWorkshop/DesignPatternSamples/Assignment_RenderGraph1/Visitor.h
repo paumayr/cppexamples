@@ -7,9 +7,12 @@
 class Visitor
 {
 public:
-	virtual void VisitCircle(Circle &circle) = 0;
+	// Called when a circle is visited.
+	virtual void visitCircle(Circle &circle) = 0;
 
-	virtual void VisitRectangle(Rectangle &rectangle) = 0;
+	// Called when a rectangle is visited.
+	virtual void visitRectangle(Rectangle &rectangle) = 0;
 
-	virtual void VisitComposite(CompositeShape &composite) = 0;
+	// called when a composite shape is visited.
+	virtual void visitComposite(CompositeShape &composite) = 0;
 };

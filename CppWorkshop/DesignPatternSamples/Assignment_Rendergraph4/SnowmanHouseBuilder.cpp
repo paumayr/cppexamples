@@ -7,8 +7,6 @@
 #include "CompositeShape.hpp"
 
 using namespace std;
-using namespace std::tr1;
-
 
 shared_ptr<Shape> SnowmanHouseBuilder::LoadShape(shared_ptr<ShapeFactory> shapeFactory)
 {

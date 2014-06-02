@@ -8,5 +8,5 @@ class MeshOGL;
 class MeshFactoryOGL : public MeshFactory
 {
 public:
-	virtual std::tr1::shared_ptr<Mesh> CreateMesh();
+	virtual std::shared_ptr<Mesh> CreateMesh();
 };

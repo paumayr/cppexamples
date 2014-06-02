@@ -14,16 +14,16 @@ class InteractiveShapeBuilder : public ShapeBuilder
 		LastChoice
 	};
 public:
-	virtual std::tr1::shared_ptr<Shape> LoadShape(std::tr1::shared_ptr<ShapeFactory> factory);
+	virtual std::shared_ptr<Shape> LoadShape(std::shared_ptr<ShapeFactory> factory);
 
 private:
-	std::tr1::shared_ptr<Shape> createShape(std::tr1::shared_ptr<ShapeFactory> factory, int level);
+	std::shared_ptr<Shape> createShape(std::shared_ptr<ShapeFactory> factory, int level);
 	void printMenu(int level) const;
 	void printIndent(int level) const;
 
-	std::tr1::shared_ptr<Shape> createCircle(std::tr1::shared_ptr<ShapeFactory> factory, int level);
-	std::tr1::shared_ptr<Shape> createRectangle(std::tr1::shared_ptr<ShapeFactory> factory, int level);
-	std::tr1::shared_ptr<Shape> createComposite(std::tr1::shared_ptr<ShapeFactory> factory, int level);
+	std::shared_ptr<Shape> createCircle(std::shared_ptr<ShapeFactory> factory, int level);
+	std::shared_ptr<Shape> createRectangle(std::shared_ptr<ShapeFactory> factory, int level);
+	std::shared_ptr<Shape> createComposite(std::shared_ptr<ShapeFactory> factory, int level);
 
 
 	MenuChoice getMenuChoise();

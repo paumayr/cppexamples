@@ -10,5 +10,5 @@ class ShapeBuilder
 {
 public:
 	virtual ~ShapeBuilder() {};
-	virtual std::tr1::shared_ptr<Shape> LoadShape(std::tr1::shared_ptr<ShapeFactory> factory) = 0;
+	virtual std::shared_ptr<Shape> LoadShape(std::shared_ptr<ShapeFactory> factory) = 0;
 };

@@ -11,7 +11,6 @@
 #include "StandardShapeFactory.hpp"
 
 using namespace std;
-using namespace std::tr1;
 
 shared_ptr<ShapeFactory> createShapeFactory(const std::string& type)
 {
