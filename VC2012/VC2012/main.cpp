@@ -12,15 +12,13 @@ using namespace std;
 void CppAmpMethod();
 void TestMatrixAmp();
 
-float performWork(const vector<float> &ca, const vector<float> &cb, int size)
+float performWork(const vector<float> &ca, const vector<float> &cb, vector<float> &sum, int size)
 {
 	float redux = 0.0;
-	//#pragma loop(no_vector)
+	#pragma loop(no_vector)
 	for (int i = 0; i < size; i++)
 	{
-		float x = sqrtf((ca[i] + cb[i]) * (ca[i] + cb[i])) / 2.0f;
-			
-		redux += x;
+		sum[i] = sqrtf((ca[i] + cb[i]) * (ca[i] + cb[i])) / 2.0f;
 	}
 
 	return redux;
@@ -41,12 +39,12 @@ void perfTest()
 		b[i] = i * 0.5f;
 	}
 	
-	//#pragma loop(hint_parallel(4))
+	//#pragma loop(hint_parallel(2))
 	//#pragma loop(ivdep)
 	//#pragma loop(hint_parallel(0))
-	for(int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++)
 	{
-		sum[i] = performWork(a, b, size);
+		performWork(a, b, sum, size);
 	}
 
 	cout << "sum is : " << sum[13] << endl;
