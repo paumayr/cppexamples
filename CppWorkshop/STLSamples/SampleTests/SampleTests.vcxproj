@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="complexelements.cpp" />
+    <ClCompile Include="find.cpp" />
     <ClCompile Include="iterators.cpp" />
     <ClCompile Include="list.cpp" />
     <ClCompile Include="map.cpp" />
