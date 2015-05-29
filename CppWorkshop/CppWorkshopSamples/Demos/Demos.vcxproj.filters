@@ -101,5 +101,8 @@
     <ClCompile Include="pplx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="stringhandling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
