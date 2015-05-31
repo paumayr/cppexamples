@@ -26,6 +26,9 @@ namespace Demos
 
 			// valid, hold R-value reference
 			std::string && resultRRef = getName();
+
+			auto var = resultRRef;
+			bool result = var == "some name";
 		}
 
 		void print(int & value) { Logger::WriteMessage("Inside L-Value Reference print.\n"); }

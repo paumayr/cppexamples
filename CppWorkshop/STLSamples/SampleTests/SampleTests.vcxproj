@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{964FEC20-26FF-4014-A3BD-47016EAD8E3D}</ProjectGuid>
+    <ProjectGuid>{A6376C92-22C5-4481-A248-66BA2AF49D99}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Demos</RootNamespace>
+    <RootNamespace>SampleTests</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -53,7 +53,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions);LINUX</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <UseFullPaths>true</UseFullPaths>
     </ClCompile>
     <Link>
@@ -86,37 +86,18 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="algorithms.cpp" />
-    <ClCompile Include="async.cpp" />
-    <ClCompile Include="atomics.cpp" />
-    <ClCompile Include="chrono.cpp" />
-    <ClCompile Include="custom_deleter.cpp" />
-    <ClCompile Include="functional.cpp" />
-    <ClCompile Include="lambdas.cpp" />
-    <ClCompile Include="Memory.cpp" />
-    <ClCompile Include="move_semantics.cpp" />
-    <ClCompile Include="move_semantics2.cpp" />
-    <ClCompile Include="aliasing.cpp" />
-    <ClCompile Include="MyTestClass.cpp" />
-    <ClCompile Include="old_new.cpp" />
-    <ClCompile Include="operator_overload.cpp" />
-    <ClCompile Include="pplx.cpp" />
-    <ClCompile Include="rvalue_references.cpp" />
-    <ClCompile Include="scl.cpp" />
-    <ClCompile Include="shared_ptr.cpp" />
+    <ClCompile Include="complexelements.cpp" />
+    <ClCompile Include="find.cpp" />
+    <ClCompile Include="iterators.cpp" />
+    <ClCompile Include="list.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="removeeraseidiom.cpp" />
+    <ClCompile Include="sorting.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="stringhandling.cpp" />
-    <ClCompile Include="TestAuto.cpp" />
-    <ClCompile Include="TestUnorderedMap.cpp" />
-    <ClCompile Include="threading.cpp" />
-    <ClCompile Include="thread_support.cpp" />
-    <ClCompile Include="uniform_initialization.cpp" />
-    <ClCompile Include="unique_pointer.cpp" />
-    <ClCompile Include="variadic_templates.cpp" />
-    <ClCompile Include="virtualdestructor.cpp" />
+    <ClCompile Include="vector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
