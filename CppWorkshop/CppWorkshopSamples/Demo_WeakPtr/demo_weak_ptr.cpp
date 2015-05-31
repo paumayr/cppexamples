@@ -10,15 +10,15 @@ int main(int argc, char **argv)
   weak_ptr<int> wp;
 
   {
-    auto sp1 = make_shared<int>(10);
+	 shared_ptr<int> sp1 = shared_ptr<int>(new int(10));
 	
     cout << "usecount: " << sp1.use_count() << endl;
     {
-      auto sp2 = sp1;
+	  shared_ptr<int> sp2 = sp1;
       wp = sp1;
       {
         // if we need a shared pointer from a weak pointer, call lock
-        auto sp3 = wp.lock();
+		 shared_ptr<int> sp3 = wp.lock();
         // ... be sure to check before using.
         if (sp3 != nullptr)
         {
@@ -31,6 +31,8 @@ int main(int argc, char **argv)
     }
     cout << "usecount: " << sp1.use_count() << endl;
   }
+
+  shared_ptr<int> sp4 = wp.lock();
 
   // weak pointer should have expired here.
   if (wp.expired())

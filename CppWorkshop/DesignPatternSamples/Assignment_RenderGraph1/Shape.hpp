@@ -2,13 +2,6 @@
 
 class Visitor;
 
-struct Counter
-{
-	int rectangles;
-	int circles;
-	int composites;
-};
-
 class Shape
 {
 public:

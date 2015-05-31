@@ -12,9 +12,9 @@ void CompositeShape::AddShape(ShapePtr shape)
 // renders the shape (create output at least)...
 void CompositeShape::render() const
 {
-	for (int i = 0; i < this->shapes.size(); i++)
+	for (auto& shape : this->shapes)
 	{
-		this->shapes[i]->render();
+		shape->render();
 	}
 }
 

@@ -15,7 +15,7 @@ void TestMatrixAmp();
 float performWork(const vector<float> &ca, const vector<float> &cb, vector<float> &sum, int size)
 {
 	float redux = 0.0;
-	#pragma loop(no_vector)
+	// #pragma loop(no_vector)
 	for (int i = 0; i < size; i++)
 	{
 		sum[i] = sqrtf((ca[i] + cb[i]) * (ca[i] + cb[i])) / 2.0f;
@@ -41,7 +41,7 @@ void perfTest()
 	
 	//#pragma loop(hint_parallel(2))
 	//#pragma loop(ivdep)
-	//#pragma loop(hint_parallel(0))
+	#pragma loop(hint_parallel(0))
 	for (int i = 0; i < size; i++)
 	{
 		performWork(a, b, sum, size);
