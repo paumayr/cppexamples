@@ -86,13 +86,17 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="accesscontrol.cpp" />
     <ClCompile Include="algorithms.cpp" />
+    <ClCompile Include="arrays.cpp" />
+    <ClCompile Include="assignmentoperator.cpp" />
     <ClCompile Include="async.cpp" />
     <ClCompile Include="atomics.cpp" />
     <ClCompile Include="casting.cpp" />
     <ClCompile Include="chrono.cpp" />
     <ClCompile Include="customsharedpointer.cpp" />
     <ClCompile Include="custom_deleter.cpp" />
+    <ClCompile Include="demo_unions.cpp" />
     <ClCompile Include="functional.cpp" />
     <ClCompile Include="lambdas.cpp" />
     <ClCompile Include="Memory.cpp" />
@@ -106,13 +110,17 @@
     <ClCompile Include="rvalue_references.cpp" />
     <ClCompile Include="scl.cpp" />
     <ClCompile Include="sharedpointervector3.cpp" />
+    <ClCompile Include="shared_from_this.cpp" />
     <ClCompile Include="shared_ptr.cpp" />
     <ClCompile Include="simpleraii.cpp" />
+    <ClCompile Include="slicing.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="stdsharedptr.cpp" />
     <ClCompile Include="stringhandling.cpp" />
+    <ClCompile Include="templates.cpp" />
     <ClCompile Include="TestAuto.cpp" />
     <ClCompile Include="TestUnorderedMap.cpp" />
     <ClCompile Include="threading.cpp" />

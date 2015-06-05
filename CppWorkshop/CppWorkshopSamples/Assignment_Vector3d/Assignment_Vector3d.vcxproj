@@ -86,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h" />
-    <ClInclude Include="vector3setter.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
