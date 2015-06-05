@@ -17,15 +17,15 @@ namespace Demos
 			}
 		};
 
-		std::shared_ptr<FILE*> OpenFile()
+		std::shared_ptr<FILE> OpenFile()
 		{
 			FILE *f;
 			if (fopen_s(&f, "c:\\temp\\Somefile.txt", "r") == 0)
 			{
-				return std::shared_ptr<FILE*>(f, CloseFileHandler);
+				return std::shared_ptr<FILE>(f, CloseFileHandler);
 			}
 
-			return std::shared_ptr<FILE*>(nullptr, CloseFileHandler);
+			return std::shared_ptr<FILE>(nullptr, CloseFileHandler);
 		}
 		
 		TEST_METHOD(TestSharedPointerWithCustomDeleter)

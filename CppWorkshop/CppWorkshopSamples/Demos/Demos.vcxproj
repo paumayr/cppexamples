@@ -121,6 +121,7 @@
     <ClCompile Include="unique_pointer.cpp" />
     <ClCompile Include="variadic_templates.cpp" />
     <ClCompile Include="virtualdestructor.cpp" />
+    <ClCompile Include="weak_ptr.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
