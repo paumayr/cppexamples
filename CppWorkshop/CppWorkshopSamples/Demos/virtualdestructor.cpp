@@ -7,6 +7,7 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
 
+// Macros and pre-processor.
 #define MYMAX(a, b) (a < b ? b : a)
 
 #ifdef LINUX

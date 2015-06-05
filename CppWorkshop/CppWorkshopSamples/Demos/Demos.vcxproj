@@ -89,6 +89,7 @@
     <ClCompile Include="algorithms.cpp" />
     <ClCompile Include="async.cpp" />
     <ClCompile Include="atomics.cpp" />
+    <ClCompile Include="casting.cpp" />
     <ClCompile Include="chrono.cpp" />
     <ClCompile Include="custom_deleter.cpp" />
     <ClCompile Include="functional.cpp" />

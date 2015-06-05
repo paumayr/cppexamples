@@ -76,11 +76,12 @@ TEST_CLASS(TestAsync)
 		auto future = async(throwsException);
 
 		using namespace std::chrono;
-		this_thread::sleep_for(seconds(5));
+		this_thread::sleep_for(milliseconds(100));
 
 		try
 		{
 			future.wait();
+			future.get();
 			Assert::Fail();
 		}
 		catch (std::exception ex)

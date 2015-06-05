@@ -107,5 +107,8 @@
     <ClCompile Include="virtualdestructor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="casting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

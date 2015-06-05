@@ -64,7 +64,7 @@ TEST_CLASS(STLAlgorithms)
 		auto it3 = next(a.begin());
 
 		Assert::IsTrue(2 == distance(it1, it2));
-		auto d3d1 = distance(it3, it1);
+		auto d3d1 = distance(it1, it3);
 	}
 
 	TEST_METHOD(TestTransformTarget)
@@ -213,7 +213,8 @@ TEST_CLASS(STLAlgorithms)
 	*/
 	TEST_METHOD(TestUnique)
 	{
-		vector<int> a{ 10, 20, 30, 20, 30, 40, 50, 50, 60, 60, 60, 70, 70, 80, 90 };
+		// SORTED vector of elements. only adjacent duplicate elements are removed.
+		vector<int> a{ 10, 20, 30, 30, 30, 40, 50, 50, 60, 60, 60, 70, 70, 80, 90 };
 		
 		// remove-erase paradigm!
 		auto newLogicalEnd = std::unique(begin(a), end(a));

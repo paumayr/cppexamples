@@ -100,13 +100,13 @@ TEST_CLASS(TestPPL)
 
 			while (!token.is_canceled()) {
 				Logger::WriteMessage("Sleeping...\n");
-				this_thread::sleep_for(chrono::seconds(1));
+				this_thread::sleep_for(chrono::milliseconds(100));
 			}
 
 			Logger::WriteMessage("Finishing Task\n");
 		});
 
-		this_thread::sleep_for(chrono::seconds(10));
+		this_thread::sleep_for(chrono::seconds(1));
 
 		cancellationTokenSource.cancel();
 
