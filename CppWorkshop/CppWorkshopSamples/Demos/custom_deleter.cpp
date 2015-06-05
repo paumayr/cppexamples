@@ -9,45 +9,23 @@ namespace Demos
 {
 	TEST_CLASS(CustomDeleter)
 	{
-		struct CloseFileHandler
+		static void CloseFileHandler(FILE *fp)
 		{
-			void operator()(FILE *fp)
+			if (fp != 0)
 			{
-				if (fp != 0)
-				{
-					fclose(fp);
-				}
+				fclose(fp);
 			}
 		};
 
-		template<typename T, typename Deleter>
-		struct ResourceHandle
-		{
-		protected:
-			shared_ptr<void> sp;
-		public:
-			explicit ResourceHandle()
-			{
-			}
-
-			explicit ResourceHandle(T handle)
-			{
-				sp = shared_ptr<void>(handle, Deleter());
-			}
-
-			 operator T() { return (T)sp.get(); }
-			 operator bool() { return sp.operator bool(); }
-		};
-
-		ResourceHandle<FILE*, CloseFileHandler> OpenFile()
+		std::shared_ptr<FILE*> OpenFile()
 		{
 			FILE *f;
 			if (fopen_s(&f, "c:\\temp\\Somefile.txt", "r") == 0)
 			{
-				return ResourceHandle<FILE*, CloseFileHandler>(f);
+				return std::shared_ptr<FILE*>(f, CloseFileHandler);
 			}
 
-			return ResourceHandle<FILE*, CloseFileHandler>();
+			return std::shared_ptr<FILE*>(nullptr, CloseFileHandler);
 		}
 		
 		TEST_METHOD(TestSharedPointerWithCustomDeleter)

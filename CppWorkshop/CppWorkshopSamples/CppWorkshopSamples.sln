@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppWorkshopSamples", "CppWorkshopSamples\CppWorkshopSamples.vcxproj", "{CFBC5AE6-BFAC-4F3E-81EB-7EE60198127C}"
 EndProject
@@ -14,8 +14,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_AssignmentOperator", "Demo_AssignmentOperator\Demo_AssignmentOperator.vcxproj", "{2D9F3444-592A-4B7E-93E0-C1B62D230AED}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_static", "Demo_static\Demo_static.vcxproj", "{F32B0937-FDB0-4B44-9773-B60A98EEB0C0}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_SharedPtr", "Demo_SharedPtr\Demo_SharedPtr.vcxproj", "{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_StaticLibrary", "Demo_StaticLibrary\Demo_StaticLibrary.vcxproj", "{A066F39C-650C-42F7-818F-4BE48C82CE1A}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -34,13 +32,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_stdsharedptr", "Demo_s
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_Strings", "Demo_Strings\Demo_Strings.vcxproj", "{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_SharedPointer", "Demo_SharedPointer\Demo_SharedPointer.vcxproj", "{212CFD62-E914-4BF7-A1CB-58935755CD81}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_SharedFromThis", "Demo_SharedFromThis\Demo_SharedFromThis.vcxproj", "{785FD295-1847-41E2-B512-EECEE733DAD8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_WeakPtr", "Demo_WeakPtr\Demo_WeakPtr.vcxproj", "{8E2E6A2A-1D95-4063-871C-6CCB11F61232}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_SimpleRAII", "Demo_SimpleRAII\Demo_SimpleRAII.vcxproj", "{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demos", "Demos\Demos.vcxproj", "{964FEC20-26FF-4014-A3BD-47016EAD8E3D}"
 EndProject
@@ -108,14 +102,6 @@ Global
 		{F32B0937-FDB0-4B44-9773-B60A98EEB0C0}.Release|Win32.ActiveCfg = Release|Win32
 		{F32B0937-FDB0-4B44-9773-B60A98EEB0C0}.Release|Win32.Build.0 = Release|Win32
 		{F32B0937-FDB0-4B44-9773-B60A98EEB0C0}.Release|x64.ActiveCfg = Release|Win32
-		{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}.Debug|ARM.ActiveCfg = Debug|Win32
-		{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}.Debug|Win32.ActiveCfg = Debug|Win32
-		{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}.Debug|Win32.Build.0 = Debug|Win32
-		{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}.Debug|x64.ActiveCfg = Debug|Win32
-		{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}.Release|ARM.ActiveCfg = Release|Win32
-		{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}.Release|Win32.ActiveCfg = Release|Win32
-		{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}.Release|Win32.Build.0 = Release|Win32
-		{2303BCDC-A806-4E8C-83CC-33613AB1EC8E}.Release|x64.ActiveCfg = Release|Win32
 		{A066F39C-650C-42F7-818F-4BE48C82CE1A}.Debug|ARM.ActiveCfg = Debug|Win32
 		{A066F39C-650C-42F7-818F-4BE48C82CE1A}.Debug|Win32.ActiveCfg = Debug|Win32
 		{A066F39C-650C-42F7-818F-4BE48C82CE1A}.Debug|Win32.Build.0 = Debug|Win32
@@ -172,14 +158,6 @@ Global
 		{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}.Release|Win32.ActiveCfg = Release|Win32
 		{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}.Release|Win32.Build.0 = Release|Win32
 		{94DC779A-9B0F-4ABB-BD3A-157F610B13E8}.Release|x64.ActiveCfg = Release|Win32
-		{212CFD62-E914-4BF7-A1CB-58935755CD81}.Debug|ARM.ActiveCfg = Debug|Win32
-		{212CFD62-E914-4BF7-A1CB-58935755CD81}.Debug|Win32.ActiveCfg = Debug|Win32
-		{212CFD62-E914-4BF7-A1CB-58935755CD81}.Debug|Win32.Build.0 = Debug|Win32
-		{212CFD62-E914-4BF7-A1CB-58935755CD81}.Debug|x64.ActiveCfg = Debug|Win32
-		{212CFD62-E914-4BF7-A1CB-58935755CD81}.Release|ARM.ActiveCfg = Release|Win32
-		{212CFD62-E914-4BF7-A1CB-58935755CD81}.Release|Win32.ActiveCfg = Release|Win32
-		{212CFD62-E914-4BF7-A1CB-58935755CD81}.Release|Win32.Build.0 = Release|Win32
-		{212CFD62-E914-4BF7-A1CB-58935755CD81}.Release|x64.ActiveCfg = Release|Win32
 		{785FD295-1847-41E2-B512-EECEE733DAD8}.Debug|ARM.ActiveCfg = Debug|Win32
 		{785FD295-1847-41E2-B512-EECEE733DAD8}.Debug|Win32.ActiveCfg = Debug|Win32
 		{785FD295-1847-41E2-B512-EECEE733DAD8}.Debug|Win32.Build.0 = Debug|Win32
@@ -196,14 +174,6 @@ Global
 		{8E2E6A2A-1D95-4063-871C-6CCB11F61232}.Release|Win32.ActiveCfg = Release|Win32
 		{8E2E6A2A-1D95-4063-871C-6CCB11F61232}.Release|Win32.Build.0 = Release|Win32
 		{8E2E6A2A-1D95-4063-871C-6CCB11F61232}.Release|x64.ActiveCfg = Release|Win32
-		{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}.Debug|ARM.ActiveCfg = Debug|Win32
-		{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}.Debug|Win32.ActiveCfg = Debug|Win32
-		{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}.Debug|Win32.Build.0 = Debug|Win32
-		{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}.Debug|x64.ActiveCfg = Debug|Win32
-		{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}.Release|ARM.ActiveCfg = Release|Win32
-		{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}.Release|Win32.ActiveCfg = Release|Win32
-		{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}.Release|Win32.Build.0 = Release|Win32
-		{99BE15AC-25B5-45FF-98B7-2BAE58F1E5CF}.Release|x64.ActiveCfg = Release|Win32
 		{964FEC20-26FF-4014-A3BD-47016EAD8E3D}.Debug|ARM.ActiveCfg = Debug|Win32
 		{964FEC20-26FF-4014-A3BD-47016EAD8E3D}.Debug|Win32.ActiveCfg = Debug|Win32
 		{964FEC20-26FF-4014-A3BD-47016EAD8E3D}.Debug|Win32.Build.0 = Debug|Win32

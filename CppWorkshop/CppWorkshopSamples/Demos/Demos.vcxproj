@@ -91,6 +91,7 @@
     <ClCompile Include="atomics.cpp" />
     <ClCompile Include="casting.cpp" />
     <ClCompile Include="chrono.cpp" />
+    <ClCompile Include="customsharedpointer.cpp" />
     <ClCompile Include="custom_deleter.cpp" />
     <ClCompile Include="functional.cpp" />
     <ClCompile Include="lambdas.cpp" />
@@ -104,7 +105,9 @@
     <ClCompile Include="pplx.cpp" />
     <ClCompile Include="rvalue_references.cpp" />
     <ClCompile Include="scl.cpp" />
+    <ClCompile Include="sharedpointervector3.cpp" />
     <ClCompile Include="shared_ptr.cpp" />
+    <ClCompile Include="simpleraii.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
